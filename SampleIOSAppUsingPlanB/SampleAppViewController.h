@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <iAd/iAd.h>
 
 #import "SampleAppRandomYelpRecommender.h"
+#import "SampleAppBannerAdDelegate.h"
 
 
 @interface SampleAppViewController : UIViewController <SampleAppRandomYelpRecommenderDelegate>
+
+@property (nonatomic) BOOL shakeDetectionActive;
 
 @end

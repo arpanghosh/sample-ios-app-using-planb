@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		810F7C771863BBFC0058769E /* SampleAppLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810F7C761863BBFC0058769E /* SampleAppLaunchViewController.m */; };
+		810F7C7F18642F050058769E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B8DDAB1863011A0093CC04 /* iAd.framework */; };
+		810F7C8218642FCD0058769E /* SampleAppBannerAdDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 810F7C8118642FCD0058769E /* SampleAppBannerAdDelegate.m */; };
 		81B8DDA3186157D80093CC04 /* SampleAppYelpRecommendation.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B8DDA2186157D80093CC04 /* SampleAppYelpRecommendation.m */; };
 		81B8DDA81862BB570093CC04 /* image_not_available_small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81B8DDA71862BB570093CC04 /* image_not_available_small.jpg */; };
 		81B8DDAA1862BB850093CC04 /* image_not_available.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81B8DDA91862BB850093CC04 /* image_not_available.jpg */; };
@@ -82,6 +84,8 @@
 /* Begin PBXFileReference section */
 		810F7C751863BBFC0058769E /* SampleAppLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppLaunchViewController.h; sourceTree = "<group>"; };
 		810F7C761863BBFC0058769E /* SampleAppLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppLaunchViewController.m; sourceTree = "<group>"; };
+		810F7C8018642FCD0058769E /* SampleAppBannerAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleAppBannerAdDelegate.h; sourceTree = "<group>"; };
+		810F7C8118642FCD0058769E /* SampleAppBannerAdDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleAppBannerAdDelegate.m; sourceTree = "<group>"; };
 		81B8DDA1186157D80093CC04 /* SampleAppYelpRecommendation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleAppYelpRecommendation.h; path = ../SampleAppYelpRecommendation.h; sourceTree = "<group>"; };
 		81B8DDA2186157D80093CC04 /* SampleAppYelpRecommendation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleAppYelpRecommendation.m; path = ../SampleAppYelpRecommendation.m; sourceTree = "<group>"; };
 		81B8DDA71862BB570093CC04 /* image_not_available_small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image_not_available_small.jpg; path = Images.xcassets/image_not_available_small.jpg; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810F7C7F18642F050058769E /* iAd.framework in Frameworks */,
 				81B9CF5D1860FDFB00F9646C /* libxml2.dylib in Frameworks */,
 				81B9CF5B1860FDEA00F9646C /* Security.framework in Frameworks */,
 				81B9CF591860FDE300F9646C /* CoreLocation.framework in Frameworks */,
@@ -193,6 +198,8 @@
 		810F7C7C18640CAB0058769E /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				810F7C8018642FCD0058769E /* SampleAppBannerAdDelegate.h */,
+				810F7C8118642FCD0058769E /* SampleAppBannerAdDelegate.m */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -475,23 +482,24 @@
 				81B9CF8B1860FED300F9646C /* NSString+URLEncoding.m in Sources */,
 				81B9CFA31860FED300F9646C /* OAProblem.m in Sources */,
 				81B9CFAD1860FED300F9646C /* OATokenManager.m in Sources */,
-				810F7C771863BBFC0058769E /* SampleAppLaunchViewController.m in Sources */,
 				81B9CF991860FED300F9646C /* OAConsumer.m in Sources */,
 				81B9CF931860FED300F9646C /* sha1.c in Sources */,
-				81B9CFB3186104DA00F9646C /* SampleAppRandomYelpRecommender.m in Sources */,
 				81B9CFA51860FED300F9646C /* OARequestParameter.m in Sources */,
 				81B9CF971860FED300F9646C /* OACall.m in Sources */,
 				81B9CF951860FED300F9646C /* OAAttachment.m in Sources */,
 				81B9CFA71860FED300F9646C /* OAServiceTicket.m in Sources */,
 				81B9CF9F1860FED300F9646C /* OAMutableURLRequest.m in Sources */,
-				81B8DDA3186157D80093CC04 /* SampleAppYelpRecommendation.m in Sources */,
 				81B9CF9B1860FED300F9646C /* OADataFetcher.m in Sources */,
 				81B9CF891860FED300F9646C /* NSMutableURLRequest+Parameters.m in Sources */,
 				81B9CF2D1860FD7D00F9646C /* main.m in Sources */,
 				81B9CF8D1860FED300F9646C /* NSURL+Base.m in Sources */,
 				81B9CFA11860FED300F9646C /* OAPlaintextSignatureProvider.m in Sources */,
-				81B9CF311860FD7D00F9646C /* SampleAppAppDelegate.m in Sources */,
+				81B8DDA3186157D80093CC04 /* SampleAppYelpRecommendation.m in Sources */,
+				81B9CFB3186104DA00F9646C /* SampleAppRandomYelpRecommender.m in Sources */,
+				810F7C771863BBFC0058769E /* SampleAppLaunchViewController.m in Sources */,
 				81B9CF3A1860FD7D00F9646C /* SampleAppViewController.m in Sources */,
+				810F7C8218642FCD0058769E /* SampleAppBannerAdDelegate.m in Sources */,
+				81B9CF311860FD7D00F9646C /* SampleAppAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

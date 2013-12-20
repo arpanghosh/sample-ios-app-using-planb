@@ -150,10 +150,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bAz-wk-qcK">
+                                <rect key="frame" x="0.0" y="430" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="bannerAd" destination="bAz-wk-qcK" id="Dci-g5-2hD"/>
                         <outlet property="loadingRecommendation" destination="cDx-FM-NNB" id="FeC-Ow-3tQ"/>
                         <outlet property="loadingRecommendationMessage" destination="aj3-K0-efi" id="lIX-Tl-Yib"/>
                         <outlet property="recommendationBusinessCategory" destination="cr8-Ge-Se4" id="0Ox-ph-jtC"/>

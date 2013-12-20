@@ -33,10 +33,14 @@
 
 @property (strong, nonatomic) SampleAppYelpRecommendation *randomRecommendation;
 
+@property (weak, nonatomic) IBOutlet ADBannerView *bannerAd;
+@property (strong, nonatomic) SampleAppBannerAdDelegate *bannerAdDelegate;
+
 @end
 
 
 @implementation SampleAppViewController
+
 
 // Methods to handle a user's tap for loading the Yelp mobile page
 /*******************************************************************************************************************/
@@ -237,7 +241,7 @@
 
 
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
-    if (motion == UIEventSubtypeMotionShake) {
+    if (motion == UIEventSubtypeMotionShake && self.shakeDetectionActive) {
         [self updateViewWhileFetchingRecommendation];
         [self.recommender fetchRandomRecommendation];
     }
@@ -260,8 +264,10 @@
     [self updateViewWhileFetchingRecommendation];
     [self.recommender fetchRandomRecommendation];
     
+    self.shakeDetectionActive = YES;
     [self becomeFirstResponder];
     [self initializeGestureRecognizers];
+    [self initializeBannerAdStuff];
 }
 
 
@@ -269,6 +275,12 @@
     [self.recommendationBusinessImage addGestureRecognizer:self.imageTapGestureRecognizer];
     [self.recommendationBusinessSnippet addGestureRecognizer:self.snippetTapGestureRecognizer];
     [self.recommendationBusinessStreetAddress addGestureRecognizer:self.addressTapGestureRecognizer];
+}
+
+
+-(void) initializeBannerAdStuff{
+    self.bannerAdDelegate = [[SampleAppBannerAdDelegate alloc] initWithPointerToAdDisplayingViewController:self];
+    self.bannerAd.delegate = self.bannerAdDelegate;
 }
 
 
