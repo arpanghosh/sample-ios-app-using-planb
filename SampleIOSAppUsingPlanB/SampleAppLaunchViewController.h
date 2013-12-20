@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>  
 
 #import "SampleAppViewController.h"
+#import "SampleAppInterstitialAdDelegate.h"
 
 @interface SampleAppLaunchViewController : UIViewController
+
+@property (nonatomic) BOOL interstitialAdReadyToDisplay;
 
 @end
